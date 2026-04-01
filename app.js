@@ -17,6 +17,6 @@ app.use(manipuladorDeErros)
 
 
 const Porta = process.env.PORT || 3000
-app.listen(Porta,()=>{
+app.listen(Porta,"0.0.0.0",()=>{
     console.log(`servidor rodando em http://localhost:${Porta}`);
 });
