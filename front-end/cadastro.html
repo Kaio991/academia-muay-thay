@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrícula & Acesso - Muay Thai</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cadastro.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        input[type="date"] {
+            color-scheme: dark;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="cadastro-wrapper">
+        <div class="mensagem-motivacional">
+            <h1>O CAMINHO COMEÇA <span>AQUI.</span></h1>
+            <p>"A dor é temporária, mas a glória de dominar a si mesmo é eterna. No Muay Thai, o maior adversário não é quem está na sua frente, mas quem você era ontem."</p>
+            <div class="badge-disciplina">🥊 Respeito • Disciplina • Força</div>
+        </div>
+
+        <section class="container-form">
+            <div id="area-cadastro">
+                <h2>Ficha de Alistamento</h2>
+                <p>Preencha os dados oficiais para o seu registro na academia.</p>
+                
+                <form id="form-matricula">
+                    <div class="campo">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" placeholder="Seu nome completo" required>
+                    </div>
+                    <div class="campo">
+                        <label for="email">E-mail de Contato</label>
+                        <input type="email" id="email" placeholder="exemplo@email.com" required>
+                    </div>
+                    <div class="campo">
+                        <label for="telefone">WhatsApp / Telefone</label>
+                        <input type="tel" id="telefone" placeholder="(21) 99999-9999" required>
+                    </div>
+                    <div class="campo">
+                        <label for="nascimento">Data de Nascimento</label>
+                        <input type="date" id="nascimento" required>
+                    </div>
+                    <div class="campo">
+                        <label for="senha">Crie sua Senha de Acesso</label>
+                        <input type="password" id="senha" placeholder="Mínimo 6 caracteres" required>
+                    </div>
+                    <button type="submit" class="btn-finalizar">CONCLUIR MATRÍCULA ➔</button>
+                </form>
+                
+                <p style="margin-top: 25px; text-align: center; color: #888;">
+                    Já faz parte do time? 
+                    <a href="#" id="ir-login" style="color: #d32f2f; font-weight: bold; text-decoration: none;">Acesse sua conta</a>
+                </p>
+            </div>
+
+            <div id="area-login" style="display: none;">
+                <h2>Acesso ao Tatame</h2>
+                <p>Informe suas credenciais para ver seus treinos.</p>
+                
+                <form id="form-login">
+                    <div class="campo">
+                        <label for="login-nome">Nome de Registro</label>
+                        <input type="text" id="login-nome" placeholder="Digite seu nome completo" required>
+                    </div>
+                    <div class="campo">
+                        <label for="login-senha">Sua Senha</label>
+                        <input type="password" id="login-senha" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="btn-finalizar">ENTRAR NO PORTAL ➔</button>
+                </form>
+                
+                <p style="margin-top: 25px; text-align: center; color: #888;">
+                    Ainda não se alistou? 
+                    <a href="#" id="ir-cadastro" style="color: #d32f2f; font-weight: bold; text-decoration: none;">Faça sua matrícula</a>
+                </p>
+            </div>
+
+            <a href="home.html" class="voltar">← Voltar para a Página Inicial</a>
+        </section>
+    </main>
+
+    <script src="auth.js"></script>
+</body>
+</html>

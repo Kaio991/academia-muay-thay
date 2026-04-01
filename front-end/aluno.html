@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Aluno - CT Muay Thai</title>
+    <link rel="stylesheet" href="aluno.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">CT <span>ALUNO</span></div>
+        <a href="index.html" class="btn-secondary" style="padding: 5px 15px; text-decoration: none; background: #333; color: white; border-radius: 5px;">Sair</a>
+    </nav>
+
+    <main class="container-aluno">
+        <section class="perfil-card">
+            <div class="avatar">🥊</div>
+            <h2 id="nome-aluno">Carregando...</h2>
+            <p class="prajied-status">Graduação: <span id="faixa-aluno">Branca</span></p>
+        </section>
+
+        <section id="card-pagamento" class="alerta-pagamento" style="text-align: center; display: none;">
+            <h3 style="color: #ff3131;">⚠️ MENSALIDADE PENDENTE</h3>
+            <p>Escaneie o QR Code ou copie o código PIX abaixo para regularizar:</p>
+
+            <div id="qrcode" style="background: white; padding: 10px; display: inline-block; margin: 20px 0; border-radius: 10px;"></div>
+
+            <div class="pix-copia-e-cola" style="background: #222; padding: 15px; border-radius: 10px; border: 1px solid #444; max-width: 400px; margin: 0 auto;">
+                <p style="font-size: 0.8rem; color: #aaa; margin-bottom: 5px;">PIX Copia e Cola:</p>
+                <code id="pix-code" style="word-break: break-all; font-size: 0.7rem; color: #ff3131;">00020126360014br.gov.bcb.pix0111219693271285204000053039865802BR5915CT MUAY THAI6008BRASIL62070503***6304E2D3</code>
+                <button onclick="copiarPixFull()" style="display: block; width: 100%; margin-top: 10px; background: #ff3131; color: #fff; border: none; padding: 10px; border-radius: 5px; cursor: pointer; font-weight: bold;">
+                    COPIAR CÓDIGO PIX
+                </button>
+            </div>
+        </section>
+
+        <section id="status-ok" class="alerta-pagamento" style="text-align: center; border-left: 5px solid #00ff00; display: none;">
+            <h3 style="color: #00ff00;">✅ TREINO LIBERADO</h3>
+            <p>Sua mensalidade está em dia. Bom treino!</p>
+        </section>
+
+        <section class="treinos-secao">
+            <h3>Seu Cronograma</h3>
+            <div class="treino-info" style="border-left: 4px solid #ff3131; padding-left: 15px;">
+                <div class="dia">TERÇA E QUINTA</div>
+                <div class="hora">20:00 às 21:00</div>
+                <div class="local">Tatame Principal</div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="aluno.js"></script>
+    
+    <script>
+        function copiarPixFull() {
+            const textoPix = document.getElementById('pix-code').innerText;
+            navigator.clipboard.writeText(textoPix);
+            alert("Código PIX copiado com sucesso!");
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,84 @@
+.hero {
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    
+    /* Apenas o degradê e a foto do saco de pancada */
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)),
+        url('saco-pancada.jpg');
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    
+    border-bottom: 6px solid #d32f2f;
+    position: relative; 
+}
+
+.hero h1 {
+    font-size: 4rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+}
+
+.hero h1 span {
+    color: #d32f2f;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    color: #ddd;
+    max-width: 750px;
+    margin-bottom: 3rem;
+}
+
+.btn-grande {
+    display: inline-block;
+    padding: 20px 60px;
+    background-color: #d32f2f;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 900;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    transition: 0.4s;
+    box-shadow: 0 10px 20px rgba(211, 47, 47, 0.4);
+}
+
+.btn-grande:hover {
+    transform: scale(1.1);
+    background-color: #ff3d3d;
+}
+
+.diferenciais {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    margin-top: -30px; 
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+}
+
+.card-motivacional {
+    flex: 1;
+    min-width: 300px;
+    background-color: #1f1f1f;
+    padding: 40px 30px;
+    border-radius: 12px;
+    border-bottom: 5px solid #d32f2f;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.card-motivacional:hover {
+    transform: translateY(-15px);
+}

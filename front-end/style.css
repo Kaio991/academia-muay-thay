@@ -1,0 +1,87 @@
+/* ============================================================
+   ESTILO DA HOME (INDEX.HTML) - CT MUAY THAI
+   ============================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+    background-color: #0a0a0a;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: rgba(0, 0, 0, 0.95);
+    border-bottom: 2px solid #ff3131;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo { font-size: 1.8rem; font-weight: 900; letter-spacing: 2px; }
+.logo span { color: #ff3131; }
+
+.nav-links { display: flex; list-style: none; align-items: center; }
+.nav-links li { margin-left: 30px; }
+.nav-links a { color: #fff; text-decoration: none; text-transform: uppercase; font-weight: bold; transition: 0.3s; }
+.nav-links a:hover { color: #ff3131; }
+
+/* HERO (BANNER) */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('https://images.unsplash.com/photo-1552072092-7f9b8d63efcb?auto=format&fit=crop&q=80&w=2070') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 20px; text-transform: uppercase; }
+.hero-content h1 span { color: #ff3131; text-shadow: 0 0 15px rgba(255, 49, 49, 0.5); }
+.hero-content p { font-size: 1.2rem; color: #ccc; max-width: 600px; margin: 0 auto 30px; }
+
+/* BOTÕES */
+.hero-btns { display: flex; gap: 20px; justify-content: center; }
+.btn-primary { background: #ff3131; color: #fff; padding: 15px 35px; text-decoration: none; font-weight: bold; border-radius: 5px; transition: 0.4s; }
+.btn-secondary { border: 2px solid #fff; color: #fff; padding: 13px 35px; text-decoration: none; font-weight: bold; border-radius: 5px; transition: 0.4s; }
+.btn-primary:hover { transform: scale(1.05); background: #fff; color: #000; }
+.btn-secondary:hover { background: #fff; color: #000; }
+
+/* PLANOS */
+.planos-container { padding: 80px 20px; text-align: center; background: #0d0d0d; }
+.planos-titulo { font-size: 3rem; text-transform: uppercase; margin-bottom: 50px; }
+.planos-titulo span { color: #ff3131; }
+
+.grid-planos { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+
+.card-plano {
+    background: #161616;
+    border: 1px solid #333;
+    padding: 40px;
+    width: 350px;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+.card-plano:hover { border-color: #ff3131; transform: translateY(-10px); }
+
+.preco { font-size: 3.5rem; color: #ff3131; font-weight: 900; margin: 20px 0; }
+.preco span { font-size: 1.2rem; color: #666; }
+
+.lista-beneficios { list-style: none; text-align: left; margin-bottom: 30px; }
+.lista-beneficios li { margin-bottom: 10px; color: #ddd; }
+
+
+.footer { padding: 50px; background: #050505; text-align: center; border-top: 1px solid #222; }
